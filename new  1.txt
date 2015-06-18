@@ -1,0 +1,33 @@
+<body class=" theme-blue">
+	 <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <span class="navbar-brand"><span class="fa fa-paper-plane"></span> 尚尚签</span></div>
+      </div>
+	
+	<div class="dialog">
+      <div class="panel panel-default">
+        <p class="panel-heading no-collapse">请登录</p>
+        <div class="panel-body">
+            <form action="login.do?method=login" method="post" id="loginform">
+                <div class="form-group">
+                <font color="#FF0000">${err}</font>
+                    <label>用户帐号</label>
+                    <input type="text" name="faccount" class="form-control span12" />		
+                </div>
+                <div class="form-group">
+                	<label>用户密码</label>
+                	<input type="password" name="fpassword" class="form-control span12"/>
+                	<font color="#FF0000">${err1}</font>
+                </div>
+                <div class="form-group">
+                	<label>验证码</label>
+                	<input type="password" name="validatecode" id="validatecode" class="form-control span12"/>
+                	<a href="JavaScript:reLoadImage();"><img src="<%=path%>/view/common/number.jsp" title="点击刷新" name="valimg" id="valimg"></a>
+                </div>
+                
+                <a href="javascript:void(0)" class="btn btn-primary pull-right" id="login" onclick="JavaScript:logintohome();">登录</a>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
